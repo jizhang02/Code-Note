@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{subfigure}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{chngcntr}
+\begin{document}
+\tableofcontents
+\newpage
+%\counterwithin*{equation}{section}
+%\counterwithin*{equation}{subsection}
+\section{Active Contours}
+$E_{external}$ attracts the contour to the closest image edge.\\
+$E_{internal}$ controls the contour to be continuous and smooth.
+\begin{equation}\label{key}
+E(c)=E_{internal}(c)+E_{external}(c)
+\end{equation}
+$$
+E_{internal}(c)=\int_{0}^{1}\alpha||c'(s)||^2+\beta||c''(s)||^2ds
+$$
+
+$$
+E_{external}(c)=\int_{0}^{1}-\gamma||\nabla I(c(s))||^2ds
+$$
+sometimes, noise can be existed in images, to have a better result, the method called Gradient Vector Field(GVF) is applied.\\
+Drawbacks of active contours:\\
+(1)has to keep points uniform;\\
+(2)has to attract the contour to shrink to the object;\\
+(3)can not surround multiple objects at one time;\\
+(4)can not segment the inner hole.
+\section{Level Sets}
+Snake evolves a curve, while Level Sets evolves a function$\phi(x,y)$, makes it be 0.\\
+Also called Region Based Active Contour Segmentation.
+\subsection{Chan-Vese model}
+\begin{equation}\label{key}
+\begin{array}{ll}
+E(c)=\mu(Length\ of\ C)+\nu(Area\ inside\ C)
+\\\qquad\ +\lambda_1\int_{inside}(I(x,y)-\mu_{in})^2+\lambda_2\int_{outside}(I(x,y)-\mu_{out})^2
+\end{array}
+\end{equation}
+\subsection{In terms of level set function $\varphi$}
+\begin{multline}\label{key}
+\arg\min_{c_1,c_2,\varphi} \ \mu\int_{\Omega}\delta(\varphi(x))|\nabla\varphi(x)|dx+\nu\int_{\Omega}H(\varphi(x))dx\\
++\lambda_1\int_{\Omega}|f(x)-c_1|^2H(\varphi(x))dx+\lambda_2\int_{\Omega}|f(x)-c_2|^2(1-H(\varphi(x)))dx
+\end{multline}
+\subsection{Euler-Lagrange equation}
+\begin{multline}
+\left\{ \begin{array}{ll}
+\dfrac{\partial\varphi}{\partial t}=\delta(\varphi)[\mu div(\frac{\nabla\varphi}{|\nabla\varphi|})-\nu-\lambda_1(f-c_1)^2+\lambda_2(f-c_2)^2]\quad in\ \Omega\\
+\dfrac{\delta(\varphi)}{|\nabla\varphi|}\dfrac{\partial\varphi}{\partial \vec{n}}=0\quad on\ \partial \Omega
+\end{array}\right.
+\end{multline}
+\section{Graph Cuts}
+Segmenting a image is actually adding labels in the each pixel. In graph cut algorithm, user gives the intial background and target which can be labeled as 0 and 1.\\
+(1)Contruct a graph\\
+A graph is made of 2 types of nodes and edges and weights.\\
+Every pixel in the image is a node, another two nodes is Source and Terminal node;\\
+The energy equation consists of Data item and Smooth item, respectively:
+\begin{equation}\label{key}
+E(L)=\lambda R(L)+B(L)
+\end{equation}
+Region part, which is actually the probability of p that belongs to background or object lable.\\
+$$
+R(L)=\sum_{p\in P}P_p(L_p)
+$$
+We want the energy equation as small as possible, so there is a ``-'' in front of probability.\\
+The probability is calculated by comparing the gray value of pixel and greyscale histogram.
+$$
+R_p(1)=-lnPr(l_p|'obj')
+$$
+$$
+R_p(0)=-lnPr(l_p|'bkg')
+$$
+Border item:\\
+$$
+B(L)=\sum_{p,q\in \mathcal{N}}B_{<p,q>}\cdot\delta(lp,lq)
+$$
+The more different the two neighboring pixels are, the smaller the Border item will be.
+$$
+B_{p,q}\propto\exp(-\dfrac{(I_p-I_q)^2}{2\sigma^2})
+$$
+Function $\delta(l_p,l_q)$ is actually a indicator function, that is to say, if the neighboring pixel has same known label, the border item doesn't need to be calculated.
+$$
+\delta(l_p,l_q)=\left\{ \begin{array}{ll}
+0,\quad \mathrm{if} \{l_p=l_q\}\\
+1,\quad \mathrm{if} \{l_p\neq l_q\}
+\end{array}\right.
+$$
+(2)Cut a graph\\
+Min cut(Max flow) is used to cut the graph, then the graph based image is segmented.
+\section{Grabcut}
+First, let's look at what are the differences between Graph Cuts and Grab Cut.\\
+(1)Graph Cuts uses histogram as a model to calculate the probability of pixel belong to which label.\\
+(2)Grab Cut uses GMM model based on RGB to calculate the probability of pixel belong to which label. So this model needs to iterate and learn to get better results.\\
+(3)User has to draw bakground and object in Graph Cut, but one background frame is enough for Grab Cut.\\
+\subsection{Model construct}
+\begin{equation}\label{key}
+E(\alpha,k,\theta,z)=U(\alpha,k,\theta,z)+V(\alpha,z)
+\end{equation}
+Data item:
+$$
+U(\alpha,k,\theta,z)=\sum_{n}D(\alpha_n,k_n,\theta,z_n)
+$$
+Smooth item:
+$$
+v(\alpha,z)=\gamma\sum_{(m,n)\in}C[\alpha_n\neq\alpha_m]\exp-\beta||z_m-z_n||^2
+$$
+\subsection{Iterative minimisation}
+(1)Assign GMM components to pixels.\\
+$$
+k_n:=\arg\min_{k_n}D_n(\alpha_n,k_n,\theta,z_n)
+$$
+(2)Learn GMM parameters from data z.\\
+$$
+\theta=\{\pi(\alpha,k),\mu(\alpha,k),\sum(\alpha,k),\alpha=0,1,k=1\dots K\}
+$$
+$$
+\theta:=\arg\min_{\theta} U(\alpha,k,\theta,z)
+$$
+(3)Use min cut(max flow) to segment.\\
+(4)Repeat from step 1,until convergence.
+\section{Optimization Techniques}
+\end{document}
