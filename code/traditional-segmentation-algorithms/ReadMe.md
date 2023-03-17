@@ -1,4 +1,4 @@
-# Traditional image segmentation algoriths
+# Traditional image segmentation algorithms
 
 
 
