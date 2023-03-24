@@ -17,7 +17,8 @@ This repo collects the python code and jupyter notebooks.
 * [Evaluation index](/code/basic-python-files/)
 * [Traditional image segmentation algorithms](/code/traditional-segmentation-algorithms/)
 * [U-Net](/code/u-net)
-* [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jizhang02/Code/HEAD?labpath=code%2Fmyplots.ipynb) [plots](/code/myplots.ipynb) 
+* [V-Net](/code/vnet.py)
+* [plots](/code/myplots.ipynb)  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jizhang02/Code/HEAD?labpath=code%2Fmyplots.ipynb) 
 
 
 
