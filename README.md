@@ -19,7 +19,7 @@ This repo collects the python code and jupyter notebooks.
 * [U-Net](/code/u-net)
 * [V-Net](/code/vnet.py)
 * [plots](/code/myplots.ipynb)  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jizhang02/Code/HEAD?labpath=code%2Fmyplots.ipynb)
-* [timm model list](/code/timm_model_names.ipynb)
+* [timm model list](/code/basic-python-files/timm_model_names.ipynb)
 
 
 
