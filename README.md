@@ -20,6 +20,7 @@ This repo collects the python code and jupyter notebooks.
 * [V-Net](/code/vnet.py)
 * [plots](/code/basic-python-files/myplots.ipynb) 
 * [timm model list](/code/basic-python-files/timm_model_names.ipynb)
+* [DNN Marathon](/code/dnn_marathon.ipynb)
 
 
 
