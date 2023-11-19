@@ -1,4 +1,4 @@
-![Header Image](/code/dream_codeworld.jpg)
+![Header Image](/code/figures/dream_codeworld.jpg)
 
 # Code 
 
