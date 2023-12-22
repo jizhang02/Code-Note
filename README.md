@@ -1,4 +1,4 @@
-![Header Image](/code/figures/dream_codeworld.jpg)
+![Header Image](/figures/dream_codeworld.jpg)
 
 # Code 
 
@@ -10,17 +10,11 @@
 This repo collects the python code and jupyter notebooks.
 
 ## Code lists
-* [Cardiac images preprocessing](/code/cardiac-dataset-preprocess)
-* [Compute model memory](https://gist.github.com/jizhang02/ef8eb45450f3d943fea37c6544d3808c)
-* [Convert dcm to mhd](https://gist.github.com/jizhang02/6e395880c085f7c9884d9cec5490c710)
-* [DenseNet-FCN](/code/densenetfcn)
-* [Evaluation index](/code/basic-python-files/)
-* [Traditional image segmentation algorithms](/code/traditional-segmentation-algorithms/)
-* [U-Net](/code/u-net)
-* [V-Net](/code/vnet.py)
-* [plots](/code/basic-python-files/myplots.ipynb) 
-* [timm model list](/code/basic-python-files/timm_model_names.ipynb)
-* [DNN Marathon](/code/dnn_marathon.ipynb)
+* [Cardiac images preprocessing](/cardiac-dataset-preprocess)
+* [Deep learning based image segmentation](/segmentation-dl/)
+* [Image processing based image segmentation](/segmentation-mip/)
+* [Various utils](/utils/) 
+* [DNN Marathon](/dnn_marathon.ipynb)
 
 
 
