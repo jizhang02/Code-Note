@@ -10,8 +10,8 @@ import os
 import numpy as np
 
 
-url_base = 'http://yann.lecun.com/exdb/mnist/'
-#url_base = 'https://ossci-datasets.s3.amazonaws.com/mnist/'  # mirror site
+#url_base = 'http://yann.lecun.com/exdb/mnist/'
+url_base = 'https://ossci-datasets.s3.amazonaws.com/mnist/'  # mirror site
 
 key_file = {
     'train_img':'train-images-idx3-ubyte.gz',
