@@ -15,6 +15,7 @@ This repo collects the python code and jupyter notebooks.
 * [Image processing based image segmentation](/segmentation-mip/)
 * [Various utils](/utils/) 
 * [DNN Marathon](/dnn_marathon.ipynb)
+* [Deep Learning from Scratch](/deep_learning_from_scratch.ipynb)
 
 
 
