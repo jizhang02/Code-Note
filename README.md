@@ -10,13 +10,15 @@
 This repo collects the python code and jupyter notebooks.
 
 ## Code lists
-* [Think Python](/think_python.ipynb)
-* [Deep Learning from Scratch](/deep_learning_from_scratch.ipynb)
+* [Think Python](./tutorials/think_python.ipynb)
+* [Deep Learning from Scratch](./tutorials/deep_learning_from_scratch.ipynb)
 * [Cardiac images preprocessing](/cardiac-dataset-preprocess)
 * [Deep learning based image segmentation](/segmentation-dl/)
 * [Image processing based image segmentation](/segmentation-mip/)
-* [DNN Marathon](/dnn_marathon.ipynb)
-* [Utils](/utils/) 
+* [DNN Marathon](./tutorials/dnn_marathon.ipynb)
+* [Utils](/utils/)
+* [Pretrained classification-segmentation models libs](./tutorials/models_cls_seg.ipynb)
+* [Parallel computing (torch)](./tutorials/parallel_computing.ipynb)
 
 
 
