@@ -18,7 +18,7 @@ This repo collects the python code and jupyter notebooks.
 * [DNN Marathon](./tutorials/dnn_marathon.ipynb)
 * [Utils](/utils/)
 * [Pretrained classification-segmentation models libs](./tutorials/models_cls_seg.ipynb)
-* [Parallel computing (torch)](./tutorials/parallel_computing.ipynb)
+* [Parallel computing with Pytorch in deep learning](./tutorials/parallel_computing.ipynb)
 
 
 
