@@ -8,3 +8,4 @@
 *.pyc
 tutorials/data/cifar-10-batches-py/batches.meta
 batch_*
+/tutorials/data
