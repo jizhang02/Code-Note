@@ -26,12 +26,6 @@ This repo collects the python code and jupyter notebooks.
 
 Contributions are always welcome!
 
-- Fork the project
-- Create your feature branch (git checkout -b feature/my-new-feature)
-- Commit your changes (git commit -am 'Add some feature')
-- Push to the branch (git push origin feature/my-new-feature)
-- Create a new Pull Request
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
