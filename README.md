@@ -21,6 +21,7 @@ This repo collects the python code and jupyter notebooks.
 * [Parallel computing with Pytorch in deep learning](./tutorials/parallel_computing.ipynb)
 
 ## Note lists
+* [Install nnUNet](./Note/docs/Install-nnUnet.md)
 * [Install C++](./Note/docs/Install-C++.md)
 * [Using CuPy instead of Numpy](./Note/docs/CuPy.md)
 * [Practice on medical image processing softwares](./Note/docs/Medical-imaging-processing-software.md)
