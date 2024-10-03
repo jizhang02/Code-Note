@@ -1,6 +1,6 @@
 ![Header Image](/figures/dream_codeworld.jpg)
 
-# Code 
+# Code-Note 
 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -20,7 +20,19 @@ This repo collects the python code and jupyter notebooks.
 * [Pretrained classification-segmentation models libs](./tutorials/models_cls_seg.ipynb)
 * [Parallel computing with Pytorch in deep learning](./tutorials/parallel_computing.ipynb)
 
-
+## Note lists
+* [Install C++](./Note/docs/Install-C++.md)
+* [Using CuPy instead of Numpy](./Note/docs/CuPy.md)
+* [Practice on medical image processing softwares](./Note/docs/Medical-imaging-processing-software.md)
+* [Insatall ROOT on WSL](./Note/docs/Install-ROOT-on-WSL.md)
+* [Install OpenGATE on WSL](./Note/docs/Install-OpenGATE-on-WSL.md) 
+* [Install Singularity on WSL](./Note/docs/Install-Singularity-on-WSL.md) <!--it must be no space in the file!-->
+* [Insatall CUDA 12, Tensorflow 2.12 on WSL](./Note/docs/Install-Tensorflow-on-WSL.md)
+* [Pass Arguments methods in python](./Note/docs/PassArguementsPython.md)
+* [SLURM](./Note/docs/SLURM.md)
+* [Play with VSCode](./Note/docs/Play-with-vscode.md)
+* [Cheatsheet](./Note/docs/cheatsheet.markdown)
+* [Workflow of DL](./Note/docs/DL-workflow.md)
 
 ## Contributing
 
