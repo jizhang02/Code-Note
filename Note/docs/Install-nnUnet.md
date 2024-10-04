@@ -56,10 +56,35 @@ nnUNetv2_train = "nnunetv2.run.run_training:run_training_entry"
 ```
 then go to this file  `run_training_entry.py`, then run it after adding a default parameter in function `run_training_entry`:
 ```
-parser.add_argument('dataset_name_or_id', type=str, required=False, help="Dataset name or ID to train with", default='1101')
-parser.add_argument('configuration', type=str, required=False, help="Configuration that should be trained")
-parser.add_argument('fold', type=str, default='1', required=False, help='Fold of the 5-fold cross-validation. Should be an int between 0 and 4.')
+parser.add_argument('-dataset_name_or_id', type=str, default='1101', required=False, help="Dataset name or ID to train with")
+parser.add_argument('-configuration', type=str, required=False, default='2d', # or '3d_fullres'
+help="Configuration that should be trained")
+parser.add_argument('-fold', type=str, default='1', required=False, help='Fold of the 5-fold cross-validation. Should be an int between 0 and 4.')
 ```
-6. Model predicting (similar as above)
+modify training epochs (default is 1000) before running the code:    
+`/home/jing/python_code/nnUNet/nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py` ctrl+f:
+`self.num_epochs = 2`
+
+6. Best configuration (optional)    
+`nnUNet_find_best_configuration -m 2d 3d_fullres 3d_lowres 3d_cascade_fullres -t 1`
+
+7. Model predicting
+   - in terminal 
+   `nnUNet_predict -i .../Task05_Prostate/imagesTs/ -o .../Task05_Prostate/inferTs/ -t 1 -m 3d_fullres -f 0`
+
+
+   - in code, search `nnUNetv2_predict` in the file `pyproject.toml`, you will find:
+```   
+nnUNetv2_predict = "nnunetv2.inference.predict_from_raw_data:predict_entry_point"
+```
+
+8. Model evaluating    
+   - in terminal
+`nnUNet_evaluate_folder -ref LABELFOLDER -pred PREDICTIONFOLDER -l 1 2 3`
+   - in code, search `nnUNetv2_evaluate_folder` in the file `pyproject.toml`, you will find:
+```
+nnUNetv2_evaluate_folder = "nnunetv2.evaluation.valuate_predictions:evaluate_folder_entry_point"
+```   
+
 
 ✴️ reference: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md
