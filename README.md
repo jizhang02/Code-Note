@@ -19,6 +19,7 @@ This repo collects the python code and jupyter notebooks.
 * [Utils](/utils/)
 * [Pretrained classification-segmentation models libs](./tutorials/models_cls_seg.ipynb)
 * [Parallel computing with Pytorch in deep learning](./tutorials/parallel_computing.ipynb)
+* [Self supervised learning](./tutorials/self_supervised_learning.ipynb)
 
 ## Note lists
 * [Install nnUNet](./Note/docs/Install-nnUnet.md)

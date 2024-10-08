@@ -86,5 +86,6 @@ nnUNetv2_predict = "nnunetv2.inference.predict_from_raw_data:predict_entry_point
 nnUNetv2_evaluate_folder = "nnunetv2.evaluation.valuate_predictions:evaluate_folder_entry_point"
 ```   
 
+![nnU-Net overview](../docs/fig/nnU-Net_overview.png)
 
 ✴️ reference: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md
