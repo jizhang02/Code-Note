@@ -48,4 +48,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Jing Zhang - zhangjingnm@hotmail.com
 
-Project Link: [https://github.com/jizhang02/CODE](https://github.com/jizhang02/CODE)
+Project Link: [https://github.com/jizhang02/Code-Note](https://github.com/jizhang02/Code-Note)
