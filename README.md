@@ -17,7 +17,7 @@ This repo collects the python code and jupyter notebooks.
 * [Image processing based image segmentation](/segmentation-mip/)
 * [DNN Marathon](./tutorials/dnn_marathon.ipynb)
 * [Utils](/utils/)
-* [Pretrained classification-segmentation models libs](./tutorials/models_cls_seg.ipynb)
+* [Pretrained classification-segmentation models libs (Timm&Monai)](./tutorials/models_cls_seg.ipynb)
 * [Parallel computing with Pytorch in deep learning](./tutorials/parallel_computing.ipynb)
 * [Self supervised learning](./tutorials/self_supervised_learning.ipynb)
 
