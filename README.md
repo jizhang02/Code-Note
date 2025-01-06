@@ -20,6 +20,7 @@ This repo collects the python code and jupyter notebooks.
 * [Pretrained classification-segmentation models libs (Timm&Monai)](./tutorials/models_cls_seg.ipynb)
 * [Parallel computing with Pytorch in deep learning](./tutorials/parallel_computing.ipynb)
 * [Self supervised learning](./tutorials/self_supervised_learning.ipynb)
+* [Diffusion model](./tutorials/diffusion_model.ipynb)
 
 ## Note lists
 * [Install nnUNet](./Note/docs/Install-nnUnet.md)
