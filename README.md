@@ -23,6 +23,7 @@ This repo collects the python code and jupyter notebooks.
 * [Diffusion model](./tutorials/diffusion_model.ipynb)
 
 ## Note lists
+* [Code Formatting](./Note/docs/CodeFormatting.md)
 * [Install nnUNet](./Note/docs/Install-nnUnet.md)
 * [Install C++](./Note/docs/Install-C++.md)
 * [Using CuPy instead of Numpy](./Note/docs/CuPy.md)
