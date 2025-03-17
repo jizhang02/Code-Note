@@ -38,6 +38,7 @@ This note reveals very basic usage of shell script based on SLURM.
 `#SBATCH --out=absolute path/sim_result_%a.txt` output different jobs' results    
 `#SBATCH --error=error_%j.txt`    output error results      
 `#SBATCH --nodelist cn447` specify node    
+`#SBATCH --exclude=cn55`   exclude node
 
 🔸simple version:    
 
