@@ -30,6 +30,7 @@
 * Process > Enhance Contrast: show pet image more clearly
 * Image > Overlay: add another image on the current image
 * Export GIF: Image > Stacks > 3D Project, then click File > Save as > GIF
+* Copy a ROI (line or square) to another window, select Analize > Tools > ROI manager, add current ROI, then on another window, select 'show all' from ROI manager
 
 #### Medical Image Analysis Using Slicer software
 * generate a gif 
@@ -46,6 +47,7 @@
 * It is easy to open a CT and PET image in one window or both two windows, the position is the same.
 * Adjust the contrast by clicking auto mode.
 * Load segmentation masks on the CT images and segmentation organs in 3D mode.
+* When mask and CT are loaded, the left side will show CT value and mask value of a point.
 * PaintBrush Mode on masks->Right click, remove label; Left click, add label.
 * Polygon Mode -> Draw line on current label -> accept -> move to next slide -> paste last polygon -> drag the line to fine tune.
 * LabelEditor -> Hide certain labels in all windows to only show one label.
