@@ -105,3 +105,55 @@ print(tf.config.list_physical_devices('GPU'))
   * [anaconda设置默认的启动环境](https://blog.csdn.net/weixin_40548136/article/details/106331324)
   * [Docker Image Anaconda3](https://hub.docker.com/r/continuumio/anaconda3)
   * [missing libraries when installing opengate](https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo)
+
+### 🌈 Addendum: Migrating from Singularity to Apptainer (post-2021)
+
+#### 🔄 Why the name change?
+
+Since 2021, the Singularity project has been officially transferred to the **Linux Foundation** and renamed **Apptainer**, ensuring open governance and broader community engagement.
+
+#### ✅ Compatibility
+
+- `apptainer` command is 100% compatible with previous `singularity` syntax.
+- `.sif` images remain fully usable.
+- To maintain backward compatibility, you can use symlinks.
+
+#### 🛠️ Apptainer installation steps (Ubuntu/WSL)
+
+```bash
+sudo apt update && sudo apt install -y \
+    build-essential \
+    libseccomp-dev \
+    pkg-config \
+    squashfs-tools \
+    cryptsetup \
+    curl \
+    git \
+    uidmap \
+    gnupg \
+    lsb-release
+
+wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+
+git clone https://github.com/apptainer/apptainer.git
+cd apptainer
+./mconfig
+make -C builddir
+sudo make -C builddir install
+
+apptainer --version
+```
+
+#### 🧩 Optional: Compatibility symlink
+
+```bash
+sudo ln -s /usr/local/bin/apptainer /usr/local/bin/singularity
+```
+
+#### 🔗 Official resources
+
+- 🌐 Homepage: [https://apptainer.org/](https://apptainer.org/)
+- 📖 Docs: [https://apptainer.org/docs/](https://apptainer.org/docs/)
+- 🐳 Docker to Apptainer guide: [https://apptainer.org/docs/user/main/container\_recipes.html#bootstrap-docker](https://apptainer.org/docs/user/main/container_recipes.html#bootstrap-docker)
