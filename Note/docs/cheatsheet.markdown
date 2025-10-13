@@ -46,7 +46,8 @@
 * `scp -r username@ip address:'/remotepath/file_{367..497}.root' savepath` batch download files to local
 * `scp -r phantom*_atn_1.bin username@ip address:remotepath/` upload specific type files
 * `ls -l . | egrep -c '^-'` check file numbers
-* `ls -lh path/file_name` check file size 
+* `ls -lh path/file_name` check file size
+* `chmod 777 folder/` change access permision to read/write/execute
 * `ffmpeg -i input.mp3 -ss 00:01:00 -to 00:05:23.27 -c copy output.mp3` edit audio length
 * `su root`, change to root user
 * `su jing`, change to other user
