@@ -4,7 +4,8 @@
 * [Medical Image Analysis Using FIJI software](#medical-image-analysis-using-fiji-software)
 * [Medical Image Analysis Using Slicer software](#medical-image-analysis-using-slicer-software)   
 * [Medical Image Analysis Using ITK-SNAP software](#medical-image-analysis-using-itk-snap-software)
-
+* [Medical Image Analysis Using ParaView software](#medical-image-analysis-using-paraview-software)
+* 
 #### Medical Image Analysis Using FIJI software
 * open/import a specific file in different formats
 * zoom in/out an image: +/- key
@@ -42,6 +43,7 @@
 * MIP: Lookup tables > PET-Maximum Intensity Projection
 * Isodose: In radiotherapy, set threshold value of each line
 * Adjust image contrast by right-clicking 'Adjust window/level'
+* Segment editor: smooth segmentation mask
 
 #### Medical Image Analysis Using ITK-SNAP software
 * It is easy to open a CT and PET image in one window or both two windows, the position is the same.
@@ -53,3 +55,8 @@
 * LabelEditor -> Hide certain labels in all windows to only show one label.
 * LabelEditor -> Actions -> Import/Export Label Descriptions.
 * Export dcm data to nii.gz file
+
+#### Medical Image Analysis Using Paraview software
+* Load (drag) vtk/vtp files into Paraview.
+* Color Map Editor: Interpret values as categories if the lable bar is not continious. E.g., only 0 and 1 two classes.
+
