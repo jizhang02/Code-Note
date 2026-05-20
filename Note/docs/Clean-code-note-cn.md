@@ -61,7 +61,7 @@
 
 仅仅写好代码还不够。代码需要随着时间保持干净。我们都见过代码随着时间腐烂和退化，所以我们必须积极防止这种退化。
 
-遵循 [童子军规则](http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule) 是一个好习惯。
+遵循 [童子军规则](https://www.oreilly.com/library/view/97-things-every/9780596809515/ch08.html) 是一个好习惯。
 
 > 总是让营地比你发现它时更干净。
 
