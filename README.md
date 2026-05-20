@@ -24,6 +24,7 @@ This repo collects the python code and jupyter notebooks.
 
 ## Note lists
 * [Git in VSCode](./Note/docs/Git-VSCode.md)
+* [Clean code note(中文)](./Note/docs/Clean-code-note-cn.md)
 * [Code Formatting](./Note/docs/CodeFormatting.md)
 * [Install nnUNet](./Note/docs/Install-nnUnet.md)
 * [Install C++](./Note/docs/Install-C++.md)
