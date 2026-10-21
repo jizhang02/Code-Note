@@ -40,6 +40,7 @@ This repo collects the python code and jupyter notebooks.
 * [Play with VSCode](./Note/docs/Play-with-vscode.md)
 * [Cheatsheet](./Note/docs/cheatsheet.markdown)
 * [Workflow of DL](./Note/docs/DL-workflow.md)
+* [LLM Prompts](./Note/docs/llm-prompt.md)
 
 ## Contributing
 
